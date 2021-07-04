@@ -4,8 +4,13 @@ const madge = require('madge');
 //  console.log(res);
 //});
 
-madge('../staff-app/src/Community/common/BaseMaintain/BaseTableView.js')
-	.then((res) => res.image('./images/base-table-view-dev.svg'))
-	.then((writtenImagePath) => {
-	  console.log('Image written to ' + writtenImagePath);
-	});
+
+madge('../staff-app/src/Community/Common/BaseMaintain/BaseDetailView.js')
+  .then((res)=>{
+    console.log(res.obj());
+})
+  
+	//.then((res) => res.image('./images/BaseDetailView.pdf'))
+	//.then((writtenImagePath) => {
+	//  console.log('Image written to ' + writtenImagePath);
+	// });
