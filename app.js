@@ -4,8 +4,8 @@ const madge = require('madge');
 //  console.log(res);
 //});
 
-madge('../three-js-2021/src/components/06GeometryDeepDive')
-	.then((res) => res.image('./image.svg'))
+madge('../staff-app/src/Community/common/BaseMaintain/BaseTableView.js')
+	.then((res) => res.image('./base-table-view-dev.svg'))
 	.then((writtenImagePath) => {
-		console.log('Image written to ' + writtenImagePath);
+	  console.log('Image written to ' + writtenImagePath);
 	});
