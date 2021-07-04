@@ -7,8 +7,8 @@ program
   .argument('<path>')
   .action((path, options, command) => {
     console.log(`tracing logic dependencies in your code at: ${path}`);
-    const index = url.lastIndexOf("/");
-    const fileName = url.substr(index)
+    const index = path.lastIndexOf("/");
+    const fileName = path.substr(index)
 
     madge(`${path}`)
      .then((res) => res.image(`./images/${fileName}.pdf`))
