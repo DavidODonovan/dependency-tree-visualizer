@@ -5,7 +5,7 @@ const madge = require('madge');
 //});
 
 madge('../staff-app/src/Community/common/BaseMaintain/BaseTableView.js')
-	.then((res) => res.image('./base-table-view-dev.svg'))
+	.then((res) => res.image('./images/base-table-view-dev.svg'))
 	.then((writtenImagePath) => {
 	  console.log('Image written to ' + writtenImagePath);
 	});
