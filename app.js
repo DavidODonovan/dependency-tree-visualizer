@@ -1,1 +1,5 @@
-do some madge stuff here
+const madge = require('madge');
+
+madge('./test-app').then((res)=>{
+  console.log(res);
+});
