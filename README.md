@@ -8,4 +8,7 @@ set-up: `npm i`
 
 usage: `node app.js '../some-app/src/components/some/cool/thing'`
 
-Note: the <path> argument is relative to the directory, where this app resides, so you will usually have to prefix path with '../' .
+Note: the <path> argument is relative to the directory, where this app resides, so you will usually have to prefix path with '../' 
+
+
+Images will be output into the ./images directory, with a filename of <yourComponentName>.pdf
