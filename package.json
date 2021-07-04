@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^8.0.0",
     "madge": "^5.0.1"
   }
 }
