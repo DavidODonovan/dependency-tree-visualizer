@@ -8,6 +8,7 @@ program
   .action((path, options, command) => {
     console.log(`tracing logic dependencies in your code at: ${path}`);
 
+//res.image('./images/BaseDetailView.pdf'))
     madge(`${path}`)
      .then((res) => res.image(`./images/${path}.pdf`))
      .then((outputPath) => {
