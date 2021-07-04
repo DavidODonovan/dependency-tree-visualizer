@@ -12,7 +12,10 @@ program
      .then((res) => res.image(`./images/${path}.pdf`))
      .then((outputPath) => {
        console.log('Image written to ' + outputPath);
-     });
+     })
+     .catch((err)=>{ 
+       console.log("you have an error: ", err);
+     })
   });
 
 program.parse();
