@@ -1,12 +1,21 @@
 const madge = require('madge');
-const { program } = require('commander');
+const { Command } = require('commander');
 const fs = require('fs');
 
-console.log("attempting to map dependencies - if you're in SM this may take a while..");
+const program = new Command();
+program
+  .argument('<name>')
+  .action((path, options, command) => {
+    console.log(`tracing logic dependencies in your code at: ${path}`);
 
-madge('../staff-app/src/Finance/_GeneralLedger/GeneralJournalEntry/Components/SelectGeneralJournalPosting/SelectGeneralJournalPosting.js')
-  .then((res) => res.image('./images/SelectGeneralJournalPosting.pdf'))
-  .then((writtenImagePath) => {
-    console.log('Image written to ' + writtenImagePath);
-   });
+    madge(`${path}`)
+     .then((res) => res.image(`./images/${path}.pdf`))
+     .then((outputPath) => {
+       console.log('Image written to ' + outputPath);
+     });
+  });
+
+program.parse();
+
+
 
