@@ -1,2 +1,4 @@
 node_modules
 images
+.DS_Store
+.app.js.swp
