@@ -9,9 +9,10 @@ program
     console.log(`tracing logic dependencies in your code at: ${path}`);
     const index = path.lastIndexOf("/");
     const fileName = path.substr(index)
+    console.log('filename: ', fileName)
 
     madge(`${path}`)
-     .then((res) => res.image(`./images/${fileName}.pdf`))
+     .then((res) => res.image(`./images${fileName}.pdf`))
      .then((outputPath) => {
        console.log('Image written to ' + outputPath);
      })
